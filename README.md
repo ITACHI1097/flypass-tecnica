@@ -4,7 +4,7 @@
 
 # Prueba Tecnica Flypass
 
-Nota: todo el cofigo se encuentra en la rama feature
+Nota: todo el codigo se encuentra en la rama feature
 
 Proyecto que crea un cluster EKS, con un deplopment el cual tiene un pod con 2 contenedores, uno tiene un script (/image1/script.sh), que obtiene la ip privada y lo guarda en un archivo (/root/output/timestamp), el siguiente contenedor obtiene este archivo mediante un volumen compartido enre contenedores y lo sube a un bucket s3, mediante un script (/Image2/scrpit.sh).
 
