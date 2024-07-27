@@ -36,5 +36,5 @@ NOTAS:
 1. las imágenes de los contenedores son públicas y están subidas a repositorios ECR:
 - `contenedor 1`: public.ecr.aws/p5a8f8s8/container1:latest
 - `contenedor 2`: public.ecr.aws/p5a8f8s8/container2:latest
-relacionada con la funcionalidad 2- `Funcionalidad 3`: descripción de la funcionalidad 3
+
 2. Toda la infraestructura se instala en la cuenta aws proporcionada por flypass, para su correcto funcionamiento es necesario, permisos para la creación de roles, políticas y asociaciones
