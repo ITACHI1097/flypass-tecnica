@@ -9,14 +9,13 @@ terraform {
 }
 
 provider "aws" {
-  region     = "us-east-2"
+  region     = "us-east-1"
   access_key = var.access_key
   secret_key = var.secret_key
 }
 
-resource "aws_s3_bucket" "test-terraform" {
-  bucket  = "test-terraform"
-  acl = "private"
+resource "aws_s3_bucket" "test-terraform-daniel-munoz" {
+  bucket  = "test-terraform-daniel-munoz"
   tags    = {
 	Name          = "MyS3Bucket"
 	Environment    = "Production"
