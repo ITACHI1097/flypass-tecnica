@@ -32,6 +32,6 @@ main.tf: Inicio de terraform y creacion de bucket s3
 
 NOTAS: 
 1. las imagenes de los contenedores son publicas y estan subidas a repositorios ECR:
-contenedor 1: public.ecr.aws/p5a8f8s8/container1:latest
-contenedor 2: public.ecr.aws/p5a8f8s8/container2:latest
+-´contenedor 1´: public.ecr.aws/p5a8f8s8/container1:latest
+-´contenedor 2´: public.ecr.aws/p5a8f8s8/container2:latest
 2. Toda la infraestructura se instala en la cuenta aws proporcionada por flypass, para su correcto funcionamiento es necesario permisos para la creacion de roles, politicas y asociaciones
