@@ -8,20 +8,20 @@ Proyecto que crea un cluster EKS, con un deplopment el cual tiene un pod con 2 c
 
 Toda la infraestructura esta lanzada con Terraform
 
-eks.tf: Se encarga de lanzar el cluster a travez de un modulo, que extrae informacion de red de networking.tf
-networking.tf: Genera la VPC y Subnets, que se necesita para el cluster
-podidentity.tf: Genera los permisos necesarios para que el pod pueda obtener acceso al s3 sin necesidad de service account o credenciales
-terraform.tfvars: Variables con los accesos a Amazon
-varables.tf: Creacion de variables para su uso
-main.tf: Inicio de terraform y creacion de bucket s3
-/image1: Archivos necesarios para la creacion de la imagen Docker para el primer contenedor
-/Image2: Archivos necesarios para la creacion de la imagen docker para el segundo contenedor
-/Image1/crontab: Archivo cron, con el cual se especifica cada 2 minutos la ejecucion del script
-/Image1/Dockerfile: Archivo con los pasos para generar la imagen
-/Image1/script.sh: Archivo con los pasos necesarios para extraer la ip privada
-/Image2/crontab: Archivo cron, con el cual se especifica cada 2 minutos la ejecucion del script
-/Image2/Dockerfile: Archivo con los pasos para generar la imagen
-/Image2/script.sh: Archivo con los pasos necesarios para extraer la ip privada
+- `eks.tf`: Se encarga de lanzar el cluster a travez de un modulo, que extrae informacion de red de networking.tf
+- `networking.tf`: Genera la VPC y Subnets, que se necesita para el cluster
+- `podidentity.tf`: Genera los permisos necesarios para que el pod pueda obtener acceso al s3 sin necesidad de service account o credenciales
+- `terraform.tfvars`: Variables con los accesos a Amazon
+- `varables.tf`: Creacion de variables para su uso
+- `main.tf`: Inicio de terraform y creacion de bucket s3
+- `/image1`: Archivos necesarios para la creacion de la imagen Docker para el primer contenedor
+- `/Image2`: Archivos necesarios para la creacion de la imagen docker para el segundo contenedor
+- `/Image1/crontab`: Archivo cron, con el cual se especifica cada 2 minutos la ejecucion del script
+- `/Image1/Dockerfile`: Archivo con los pasos para generar la imagen
+- `/Image1/script.sh`: Archivo con los pasos necesarios para extraer la ip privada
+- `/Image2/crontab`: Archivo cron, con el cual se especifica cada 2 minutos la ejecucion del script
+- `/Image2/Dockerfile`: Archivo con los pasos para generar la imagen
+- `/Image2/script.sh`: Archivo con los pasos necesarios para extraer la ip privada
 
 # Install
 1. modificar terraform.tfvars, con las credenciales necesarias
@@ -32,6 +32,7 @@ main.tf: Inicio de terraform y creacion de bucket s3
 
 NOTAS: 
 1. las imagenes de los contenedores son publicas y estan subidas a repositorios ECR:
--´contenedor 1´: public.ecr.aws/p5a8f8s8/container1:latest
--´contenedor 2´: public.ecr.aws/p5a8f8s8/container2:latest
+- `contenedor 1`: public.ecr.aws/p5a8f8s8/container1:latest
+- `contenedor 2`: public.ecr.aws/p5a8f8s8/container2:latest
+relacionada con la funcionalidad 2- `Funcionalidad 3`: descripción de la funcionalidad 3
 2. Toda la infraestructura se instala en la cuenta aws proporcionada por flypass, para su correcto funcionamiento es necesario permisos para la creacion de roles, politicas y asociaciones
